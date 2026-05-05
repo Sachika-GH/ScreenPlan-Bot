@@ -8,10 +8,9 @@ User=screenplan
 Group=screenplan
 WorkingDirectory=/opt/spbot
 
-Environment="SPBOT_NAPCAT_WS=ws://172.17.0.1:3001"
 Environment="SPBOT_LISTEN_HOST=0.0.0.0"
 Environment="SPBOT_LISTEN_PORT=3001"
-Environment="SPBOT_ADMIN_TOKEN=8L4ADdOL4rx79GNhVnWfQ07sl-rhCZ-BgRj5lmOqbSc"
+Environment="SPBOT_PREFIX=/"
 Environment="SPBOT_SCREENPLAN_HOST=http://localhost:5051"
 Environment="SPBOT_LLM_BASE=https://api.deepseek.com/v1"
 Environment="SPBOT_LLM_MODEL=deepseek-chat"
