@@ -324,7 +324,7 @@ def execute_function(name: str, args: dict) -> str:
 
     if name == "query_user_usage":
         uid = args["user_id"]
-        dt = args.get("date", date.today().isoformat())
+        dt = (args.get("date") or "").strip() or date.today().isoformat()
         data = admin_api(f"usage/{uid}?date={dt}")
         if "error" in data:
             return f"错误: {data['error']}"
@@ -344,7 +344,7 @@ def execute_function(name: str, args: dict) -> str:
 
     if name == "query_user_timeline":
         uid = args["user_id"]
-        dt = args.get("date", date.today().isoformat())
+        dt = (args.get("date") or "").strip() or date.today().isoformat()
         data = admin_api(f"timeline/{uid}?date={dt}")
         if "error" in data:
             return f"错误: {data['error']}"
